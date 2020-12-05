@@ -1,0 +1,45 @@
+//Program to check whether a number is a strong number or not_eq
+
+#include<stdio.h>
+
+int fact(int a); //Function prototype
+void main()
+{
+    int n,rem,sum=0,x,m;
+    
+    printf("Enter a number to check whether it is a strong number or not:");
+    scanf("%d",&n);
+    
+    m=n;
+    
+    while(n!=0)
+    {
+        rem=n%10;   //To find last digit
+        x=fact(rem);   //Calling factorial function
+        sum=sum+x;   //Finding sum of factorials
+        n=n/10;   //Removing last digit
+    }
+    
+    if(sum==m)
+        printf("%d is a strong number.",m);
+    else if(sum!=m)
+        printf("%d is not a strong number.",m);
+}
+
+//Defining factorial function
+int fact(int a)
+{
+    int b,c=1;
+    if(a==0)
+    {
+        c=1;
+    }
+    else
+    {
+        for(b=1;b<=a;b++)
+        {
+            c=c*b;
+        }
+    }
+    return c;
+}
