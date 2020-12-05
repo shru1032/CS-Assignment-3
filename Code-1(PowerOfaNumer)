@@ -1,0 +1,21 @@
+//Program to find the power of a number
+
+#include <stdio.h>
+
+void main()
+{
+    int i,j,n;
+    long long power=1;
+    
+    printf("Enter a number to find power:");
+    scanf("%d",&n);
+    printf("Enter power here:");
+    scanf("%d",&j);
+    
+    for(i=1;i<=j;i++)
+    {
+        power= power*n;
+    }
+    
+    printf("%d to the power %d is %lld",n,j,power);
+}
