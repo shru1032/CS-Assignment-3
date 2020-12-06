@@ -20,7 +20,7 @@ void main()
     
     percent= ((phy+chem+math+cs+bio)/500)*100;
     
-    printf("Percentage= %f %\n",percent);
+    printf("Percentage= %0.2f %\n",percent);
     
     if (percent>=90)
     {
@@ -47,3 +47,4 @@ void main()
         printf("Grade= F");
     }
 }
+
