@@ -1,0 +1,49 @@
+//Program to find percentage and grade.
+
+#include <stdio.h>
+
+void main()
+{
+    float phy,chem,math,cs,bio;
+    float percent;
+    printf("Enter your marks here(Out of 100) :- \n");
+    printf("Physics:");
+    scanf("%f",&phy);
+    printf("Chemistry:");
+    scanf("%f",&chem);
+    printf("Mathematics:");
+    scanf("%f",&math);
+    printf("Computer Science:");
+    scanf("%f",&cs);
+    printf("Biology:");
+    scanf("%f",&bio);
+    
+    percent= ((phy+chem+math+cs+bio)/500)*100;
+    
+    printf("Percentage= %f %\n",percent);
+    
+    if (percent>=90)
+    {
+        printf("Grade= A");
+    }
+    else if (percent>=80 && percent<90)
+    {
+        printf("Grade= B");
+    }
+    else if (percent>=70 && percent<80)
+    {
+        printf("Grade= C");
+    }
+    else if (percent>=60 && percent<70)
+    {
+        printf("Grade= D");
+    }
+    else if (percent>=40 && percent<60)
+    {
+        printf("Grade= E");
+    }
+    else if (percent<40)
+    {
+        printf("Grade= F");
+    }
+}
