@@ -1,4 +1,4 @@
-//Program to convert hexadecimal into decimal.
+//Program to convert hexadecimal into decimal number system.
 
 #include<stdio.h>
 #include<conio.h>
