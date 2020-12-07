@@ -1,0 +1,48 @@
+//Program to print strong numbers from 1 to n.
+#include <stdio.h>
+
+int main()
+{
+    int i, j, m, rem, n;
+    long long fact, sum;
+
+    /* Input upper limit from user */
+    printf("Enter number to print strong numbers less than that: ");
+    scanf("%d", &n);
+
+    printf("All Strong numbers between 1 to %d are:\n", n);
+    
+    /* Iterate from 1 to end */
+    for(i=1; i<=n; i++)
+    {
+        /* Number to check for strong number */
+        m = i;
+
+        sum = 0;
+
+        /* Find the sum of factorial of digits */ 
+        while(m > 0)
+        {
+            fact = 1;
+            rem = m % 10;
+
+            /* Find factorial of last digit of current num. */
+            for( j=1; j<=rem; j++)
+            {
+                fact = fact * j;
+            }
+
+            sum += fact; 
+
+            m /= 10;
+        }
+        
+        /* Print 'i' if it is strong number */  
+        if(sum == i)
+        {
+            printf("%d, ", i);
+        }
+    }
+
+    return 0;
+}
